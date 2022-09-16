@@ -2,6 +2,7 @@ using System;
 
 public class HelloWorld
 {
+    //hahahaha tite
     public static void Main(string[] args)
     {
         Console.WriteLine("Start code now");
