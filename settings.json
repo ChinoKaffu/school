@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "editor.fontSize": 18,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.wrapTabs": true,
+    "editor.stickyScroll.enabled": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "window.commandCenter": true,
+    "search.showLineNumbers": true,
+    "window.menuBarVisibility": "classic"
+}
