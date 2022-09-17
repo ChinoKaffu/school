@@ -125,6 +125,7 @@ echo:             [2] Launch ipconfig/flushdns
 echo:             [3] Open Privacy settings:Microphone
 echo:             [4] Open Privacy settings:Webcam
 echo:             [5] Perform basic system scan
+echo:             [6] Run MRT (Full scan and Cleanup)
 echo:             __________________________________________________  
 echo:
 echo:             [9] BACK
@@ -140,6 +141,7 @@ if %_erl%==2 goto flush
 if %_erl%==3 start ms-settings:privacy-microphone
 if %_erl%==4 start ms-settings:privacy-webcam
 if %_erl%==5 goto basicscan
+if %_erl%==6 MRT /f:y
 if %_erl%==9 goto menu
 goto moremenu
 
