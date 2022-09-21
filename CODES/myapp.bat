@@ -127,6 +127,7 @@ echo:             [3] Open Privacy settings:Microphone
 echo:             [4] Open Privacy settings:Webcam
 echo:             [5] Perform basic system scan
 echo:             [6] Run MRT (Full scan and Cleanup)
+echo:             [7] Logoff another user
 echo:             __________________________________________________  
 echo:
 echo:             [9] BACK
@@ -143,8 +144,39 @@ if %_erl%==3 start ms-settings:privacy-microphone
 if %_erl%==4 start ms-settings:privacy-webcam
 if %_erl%==5 goto basicscan
 if %_erl%==6 MRT /f:y
+if %_erl%==7 goto session
 if %_erl%==9 goto menu
 goto moremenu
+
+:session
+cls
+echo:       ______________________________________________________________
+echo:
+echo:
+query session
+echo:       ______________________________________________________________
+echo:
+set /p pick="Proceed to logoff? (Y/any key):  "
+if %pick%==y goto logoffuser
+if %pick%==Y goto logoffuser
+goto menu
+
+:logoffuser
+echo:       ______________________________________________________________
+echo:
+set /p pick="Select ID to logoff:  "
+echo:       ______________________________________________________________
+echo:
+echo:You have chosen %pick%
+echo:       ______________________________________________________________
+echo:
+set /p confirm="Proceed? Are you sure? (Y/any key): "
+echo:       ______________________________________________________________
+if %confirm%==y logoff %pick%  & goto menu
+if %confirm%==Y logoff %pick%  & goto menu
+echo process aborted
+pause>nul
+goto menu
 
 :flush
 start cmd.exe @cmd /k "ipconfig /flushdns & pause>nul & exit"

@@ -1,10 +1,25 @@
 using System;
+using System.Collections;
 
 public class HelloWorld
 {
     public static void Main(string[] args)
     {
         Console.WriteLine("Start code now");
+        Hashtable mytab = new Hashtable();
+        
+        for (int i = 0; i < 5; i++)
+        {
+            System.Console.Write("input"+(i+1)+": ");
+            mytab.Add(i,Console.ReadLine());
+        }
+        
+        System.Console.WriteLine("Hashtable has ");
+        foreach (DictionaryEntry item in mytab)
+        {
+            System.Console.WriteLine(item.Value);
+        }
+        /*
         Console.Write("Enter number between 1 and 10: ");
         bool repeat=true;
         int num=0,min=1,max=10;        
@@ -15,7 +30,7 @@ public class HelloWorld
 
             repeat = checkRange(num,min,max);
         }while(!repeat);
-        inputnum(num);
+        inputnum(num);*/
     }
     //methods
     static bool repeat;
@@ -42,4 +57,4 @@ public class HelloWorld
         }while(repeat);
     }
 }
-//C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe "C:\Users\Kaffu Chino\Desktop\CODES\newapp.cs" & newapp.exe  
+//C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe "D:\CODE PROJECTS\Github Repos\school\CODES\newapp.cs" & newapp.exe  
