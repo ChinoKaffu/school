@@ -1,0 +1,34 @@
+% MAIN %
+    clc
+    clear
+    format long
+
+    % start of user input %
+    A = [
+        4 -1 -1 0 0 0 0 0;
+        -1 4 -1 -1 0 0 0 0;
+        0 -1 4 -1 -1 0 0 0;
+        0 0 -1 4 -1 -1 0 0;
+        0 0 0 -1 4 -1 -1 0;
+        0 0 0 0 -1 4 -1 -1;
+        0 0 0 0 0 -1 4 -1;
+        0 0 0 0 0 0 -1 4;
+    ];
+
+    b = [18;18;4;4;26;16;10;32];
+
+    % end of user input %
+
+    % JACOBI METHOD %
+    fprintf("Now executing JACOBI METHOD"); 
+    pause(1);    fprintf("1.. ");
+    pause(1);    fprintf("2.. ");
+    pause(1);    fprintf("3.. "); pause(1);
+
+    [M,x] = jacobi(A,b);
+    % TODO: OUTPUT M and x %
+
+% FUNCTIONS %
+    function [M,x] = jacobi(A,b)
+        % TODO: input method here%
+    end
