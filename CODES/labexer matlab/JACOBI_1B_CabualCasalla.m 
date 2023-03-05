@@ -21,17 +21,16 @@
 
     % JACOBI METHOD %
     fprintf("Now executing JACOBI METHOD"); 
-    pause(1);    fprintf("1.. ");
-    pause(1);    fprintf("2.. ");
-    pause(1);    fprintf("3.. "); pause(1);
+    fprintf("1.. ");    pause(1);    
+    fprintf("2.. ");    pause(1);    
+    fprintf("3.. ");    pause(1);
 
     [M,x] = jacobi(A,b);
     % TODO: OUTPUT M and x %
 
 % FUNCTIONS %
     function [M,x] = jacobi(A,b)
-        % #TODO: input method here 
-        M = "tite";
+        M = "tite"; % TODO: create table M to record data
 
         size = (length(A));
         xk = zeros(size, 1);

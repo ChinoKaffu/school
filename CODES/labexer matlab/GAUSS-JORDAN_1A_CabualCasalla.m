@@ -21,9 +21,9 @@
 
     % Gauss-Jordan Elimination %
     fprintf("Now executing GAUSS-JORDAN ELIMINATION"); 
-    pause(1);    fprintf("1.. ");
-    pause(1);    fprintf("2.. ");
-    pause(1);    fprintf("3.. "); pause(1);
+    fprintf("1.. ");    pause(1);    
+    fprintf("2.. ");    pause(1);    
+    fprintf("3.. ");    pause(1);
 
     [M,x] = gaussjordan(A,b);
     fprintf("\nFinal Augmented matrix M: \n");    disp(array2table(M)); 
