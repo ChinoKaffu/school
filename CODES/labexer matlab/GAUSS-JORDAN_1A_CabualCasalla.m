@@ -17,7 +17,7 @@
 
     b = [18;18;4;4;26;16;10;32];
 
-    % end of user input %
+    % end of user input 
 
     % Gauss-Jordan Elimination %
     fprintf("Now executing GAUSS-JORDAN ELIMINATION"); 
