@@ -9,7 +9,7 @@
     b = [18;3];
 
     % GAUSS SEIDEL METHOD %
-    fprintf("Now executing GAUSS SEIDEL\n"); 
+    fprintf("Now executing GAUSS-SEIDEL\n"); 
     fprintf("1.. ");    pause(1);    
     fprintf("2.. ");    pause(1);    
     fprintf("3.. ");    pause(1);
