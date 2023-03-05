@@ -17,8 +17,6 @@
 
     b = [18;18;4;4;26;16;10;32];
 
-    % end of user input %
-
     % JACOBI METHOD %
     fprintf("Now executing JACOBI METHOD\n"); 
     fprintf("1.. ");    pause(1);    
@@ -27,16 +25,16 @@
 
     [M,x] = jacobi(A,b);
 
-    disp(M)
-    disp(array2table(M,"VariableNames",["Iteration","x1","x2","x3","x4","x5","x6","x7","x8",]));
+    disp(array2table(M,"VariableNames",["Iteration","x1","x2","x3","x4","x5","x6","x7","x8"]));
     disp(array2table(x,"VariableNames","Solution vector/array x"));
-    % TODO: OUTPUT M and x %
+    
 % FUNCTIONS %
     function [M,x] = jacobi(A,b)
         M = [];
-              
         size = (length(A));
+
         xk = zeros(size, 1); %initial guess
+
         temp = diag(A);
         D = zeros(size);
         for i = 1:size
