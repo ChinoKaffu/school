@@ -17,24 +17,17 @@
 
     b = [18;18;4;4;26;16;10;32];
 
-    tol = 10^-6;
-
-    maxiter = 100;
-
     % end of user input %
 
     % Gauss-Jordan Elimination %
-    fprintf("Now executing GAUSS-JORDAN ELIMINATION"); pause(2);
+    fprintf("Now executing GAUSS-JORDAN ELIMINATION"); 
+    pause(1);    fprintf("1.. ");
+    pause(1);    fprintf("2.. ");
+    pause(1);    fprintf("3.. "); pause(1);
+
     [M,x] = gaussjordan(A,b);
-    fprintf("\nFinal Augmented matrix M: \n");    disp(M);  
-    fprintf("\nSolution vector/array x \n");    disp(x);
-
-    % Jacobi Method%
-    fprintf("Now executing JACOBI METHOD"); pause(2);
-    [M,x] = jacobi(A,b);
-    %TODO: perform array2table here
-    fprintf("\nSolution vector/array x \n");    disp(x);
-
+    fprintf("\nFinal Augmented matrix M: \n");    disp(array2table(M)); 
+    disp(array2table(x,"VariableNames","Solution vector/array x"));
 
 % FUNCTIONS %
     function [M,x] = gaussjordan(A,b)
@@ -56,8 +49,4 @@
         end
 
         x(:,1) = M(:,9);
-    end
-
-    function [M,x] = jacobi(A,b)
-
     end
