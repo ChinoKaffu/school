@@ -30,5 +30,31 @@
 
 % FUNCTIONS %
     function [M,x] = jacobi(A,b)
-        % TODO: input method here%
+        % #TODO: input method here 
+        M = "tite";
+
+        size = (length(A));
+        xk = zeros(size, 1);
+        temp = diag(A);
+        D = zeros(size);
+        for i = 1:size
+            D(i,i) = temp(i,:);
+        end
+
+        Lb = tril(A,-1);
+        Ub = triu(A,1);
+        Tj = -inv(D)*(Lb+Ub);
+        Cj = inv(D)*b; %#ok<MINV> 
+
+        % const finish %
+
+        for i = 1:inf
+            xk1 = (Tj*xk)+Cj;
+            disp(i);
+            disp(xk1);
+            if(norm(xk-xk1)<10^-6), break; end
+            xk = xk1;
+        end
+
+        x = xk1;
     end
