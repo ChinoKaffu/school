@@ -4,9 +4,9 @@
     format long
 
     % start of user input%
-    A = [-4 5;
-          1 2];
-    b = [18;3];
+    A = [1 -2;
+          2 1];
+    b = [-1;3];
 
     % GAUSS SEIDEL METHOD %
     fprintf("Now executing GAUSS-SEIDEL\n"); 
@@ -68,7 +68,7 @@
         button = questdlg(question, 'Question', 'Answer', 'Cancel', 'Answer');
 
         if strcmp(button, 'Answer')
-            answer = 'It is not always necessary for the matrix to be diagonally dominant for the Gauss-Seidel method to converge. In some cases, the method may still converge even if the matrix does not meet the diagonally dominant condition. The convergence of the Gauss-Seidel method depends on the properties of the matrix and the initial guess. In the given example where A = [-4 5;1 2], the Gauss-Seidel method was able to converge even though the matrix is not diagonally dominant. This may is due to the specific properties of the matrix and the initial guess used.';
+            answer = 'For the Gauss-Seidel method to converge to a unique solution, a sufficient condition is that the matrix A is diagonally dominant. A matrix is diagonally dominant if the absolute value of each diagonal element is greater than the sum of the absolute values of the other elements in the same row. In the given example, the matrix A = [1 -2; 2 1] is not diagonally dominant, since the absolute value of the diagonal element 1 is not greater than the sum of the absolute values of the other elements in the first row (|-2| + |1| = 3). Therefore, the Gauss-Seidel method may not converge to a unique solution in this case.';
             msgbox(answer, 'Answer');
         end
     end
