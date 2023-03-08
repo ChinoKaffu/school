@@ -3,13 +3,13 @@
     clear
     format long
 
-    % TODO: Create matrix content
-    % "Run Gauss-Jordan Elimination to solve the IVP"
-    
-    %A = [contents here];
-    %b = [contents here];
+    A = [1 1 0;
+         1 0 1;
+         1 -1 0];
+    b = [4;-1;-2];
 
     % GAUSS JORDAN METHOD %
+
     fprintf("Now executing GAUSS-JORDAN ELIMINATION\n"); 
     fprintf("1.. ");    pause(1);    
     fprintf("2.. ");    pause(1);    
