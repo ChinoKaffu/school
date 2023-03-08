@@ -27,7 +27,7 @@
 
     [M,x] = gaussjordan(A,b);
     fprintf("\nFinal Augmented matrix M: \n");    disp(array2table(M)); 
-    disp(array2table(x,"VariableNames","Solution vector/array x"));
+    disp(array2table(x,"RowNames",["x1","x2","x3","x4","x5","x6","x7","x8"],"VariableNames","Solution vector/array x"));
 
 % FUNCTIONS %
     function [M,x] = gaussjordan(A,b)

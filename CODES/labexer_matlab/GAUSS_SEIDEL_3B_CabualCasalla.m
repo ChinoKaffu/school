@@ -17,7 +17,7 @@
     [M,x] = gaussseidel(A,b);
 
     disp(array2table(M,"VariableNames",["Iteration","x1","x2"]));
-    disp(array2table(x,"VariableNames","Solution vector/array x"));
+    disp(array2table(x,"VariableNames","Solution vector/array x","RowNames",["x1","x2"]));
 
     disp("Press any key to continue..."); pause
 

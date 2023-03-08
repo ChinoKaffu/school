@@ -4,11 +4,11 @@
     format long
 
     A = [1 1 0;
-         1 0 1;
-         1 -1 0];
+        1 0 1;
+        1 -1 0];
     b = [4;-1;-2];
 
-    % GAUSS JORDAN METHOD %
+% GAUSS JORDAN METHOD %
 
     fprintf("Now executing GAUSS-JORDAN ELIMINATION\n"); 
     fprintf("1.. ");    pause(1);    
@@ -16,6 +16,10 @@
     fprintf("3.. ");    pause(1);
 
     [M,x] = gaussjordan(A,b);
+
+    [M,x] = gaussjordan(A,b);
+    fprintf("\nFinal Augmented matrix M: \n");    disp(array2table(M,"VariableNames",["C1","C2","C3","x"])); 
+    disp(array2table(x,"RowNames",["C1","C2","C3"],"VariableNames","Solution vector/array x"));
 
 %Functions
     function [M,x] = gaussjordan(A,b)
@@ -36,5 +40,5 @@
             end
         end
 
-        x(:,1) = M(:,9);
+        x(:,1) = M(:,4);
     end
