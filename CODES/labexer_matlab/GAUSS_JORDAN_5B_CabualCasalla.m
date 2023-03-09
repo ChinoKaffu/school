@@ -5,17 +5,12 @@
 
     % start of user input %
     A = [
-        4 -1 -1 0 0 0 0 0;
-        -1 4 -1 -1 0 0 0 0;
-        0 -1 4 -1 -1 0 0 0;
-        0 0 -1 4 -1 -1 0 0;
-        0 0 0 -1 4 -1 -1 0;
-        0 0 0 0 -1 4 -1 -1;
-        0 0 0 0 0 -1 4 -1;
-        0 0 0 0 0 0 -1 4;
+        1 1 1;
+        4 6 8;
+        0.5 0.5 0.25;
     ];
 
-    b = [18;18;4;4;26;16;10;32];
+    b = [20;108;46];
 
     % end of user input 
 
@@ -27,7 +22,7 @@
 
     [M,x] = gaussjordan(A,b);
     fprintf("\nFinal Augmented matrix M: \n");    disp(array2table(M)); 
-    disp(array2table(x,"RowNames",["x1","x2","x3","x4","x5","x6","x7","x8"],"VariableNames","Solution vector/array x"));
+    disp(array2table(x,"RowNames",["A","B","C"],"VariableNames","Solution vector/array x"));
 
 % FUNCTIONS %
     function [M,x] = gaussjordan(A,b)
