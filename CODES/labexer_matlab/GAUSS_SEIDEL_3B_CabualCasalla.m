@@ -63,7 +63,7 @@
         x = xk1;
     end
 
-        function convergence()
+    function convergence()
         question = 'Does the method converge? Why or why not?';
         button = questdlg(question, 'Question', 'Answer', 'Cancel', 'Answer');
 
